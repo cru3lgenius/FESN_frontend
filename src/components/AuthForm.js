@@ -22,20 +22,35 @@ class AuthForm extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    console.log(this.state);
+    //console.log(this.state);
+    const authType = this.props.signUp ? "signup" : "signin";
+    console.log(this.props.onAuth);
+    this.props.onAuth(authType,this.state).then(()=>{
+                this.props.history.push('/');
+              })
+              .catch(()=>{
+                return;
+              });
+
     this.setState({
       email:"",
       password:"",
       profileImageUrl:"",
       username:""
     });
+
   }
 
 
   render() {
 
     const {password,username,email,profileImageUrl} = this.state;
-    const {signUp,buttonText} = this.props;
+    const {signUp,buttonText,heading,errors,history,removeError} = this.props;
+
+    history.listen(()=>{
+      removeError();
+    });
+
     return (
       <div className="row justify-content-md-center text-center">
 
@@ -74,7 +89,7 @@ class AuthForm extends Component {
                   value={username}
                   onChange={this.handleChange}/>
    
-                <label htmlFor="image-url">Profile Picture:</label>
+                <label htmlFor="image-url">Image URL:</label>
                 <input
                   type="text"
                   id="image-url" 
@@ -84,7 +99,7 @@ class AuthForm extends Component {
                   onChange={this.handleChange}/>
               </div>
             )}  
-            <button className="btn btn-primary">{buttonText}</button>      
+            <button type="submit" className="btn btn-primary">{buttonText}</button>      
           </form>
 
         </div>

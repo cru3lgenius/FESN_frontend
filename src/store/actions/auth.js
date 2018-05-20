@@ -12,21 +12,21 @@ function setCurrentUser(user){
   }
 }
 
-export function authUser (path,email,password){
-  return (dispatch) => {
+export function authUser (type,userData){
+  return dispatch => {
     return new Promise((resolve,reject)=>{
-      apiCall("post",`${root_URL}${path}`,{email,password})
-      .then(({token,...user})=>{
-        localStorage.setItem('jwtToken',token);
+      return apiCall("post",`/api/auth/${type}`,userData)
+      .then(({data:{token,...user}})=>{
+        localStorage.setItem("jwtToken",token);
         dispatch(setCurrentUser(user));
         dispatch(removeError());
         resolve();
       })
-      .catch((err)=>{
+      .catch(err=>{
         dispatch(addError(err.message));
         reject();
-      });  
-    });
+      })
+    })
   }
 }
 
@@ -37,3 +37,4 @@ export function logout(){
     dispatch(setCurrentUser({}));
   }
 }
+

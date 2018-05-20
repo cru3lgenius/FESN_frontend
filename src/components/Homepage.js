@@ -13,7 +13,7 @@ const Homepage = ({currentUser})=>{
       </Link>
   </div>)
   }else{
-    <div> RENDERING Fragrances...</div>
+    return <div> RENDERING Fragrances...</div>
   }
 }
 

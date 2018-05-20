@@ -19,7 +19,7 @@ class Navbar extends Component {
           {this.props.currentUser.isAuthenticated ? (
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <Link to={`/fragrances/new`}>Add a Fragrance</Link>
+                <Link to={`/fragrances/new`}>Add new Fragrance</Link>
               </li>
               <li>
                 <a onClick={this.logout}>Logout</a>
