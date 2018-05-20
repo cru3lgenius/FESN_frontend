@@ -14,8 +14,11 @@ ul.nav.navbar-nav li {
 }
 
 .navbar{
-  background: #111111;
+  position:relative;
+  z-index: 3;
+  background:black;
   color:#ffffff;
+  border-radius: 2px;
 }
 
 .navbar-header{
@@ -24,8 +27,60 @@ ul.nav.navbar-nav li {
 
 body{
   background-image: url('./images/background.png');
-  background-repeat: no-repeat;
+  width: 100vw;
+  height:100vh;
   background-size: cover;
   font-family: 'Raleway', sans-serif;
-  color:white;
+  color:white; 
+}
+
+.home-hero{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("./images/homepage-background-darkest.jpg");
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 8px #66757f;
+  color: #fff;
+  padding: 1rem;
+}
+
+ 
+/* .home-hero-content{
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 8px #66757f;
+  color: #fff;
+  padding: 1rem;
+} */
+
+
+.btn{
+  margin-top:1rem;
+}
+
+.btn-primary{
+  background-color:black ;
+  font-weight: bold;
+  border:1px solid grey;
+  transition: all 0.15s linear;
+}
+
+.btn-primary:hover{
+  transform: scale(1.1);
+  background-color:black;
+  border:1px solid grey;
+  text-decoration: underline;
 }

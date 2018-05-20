@@ -12,6 +12,8 @@ const Homepage = ({currentUser})=>{
         Sign up here!
       </Link>
   </div>)
+  }else{
+    <div> RENDERING Fragrances...</div>
   }
 }
 
