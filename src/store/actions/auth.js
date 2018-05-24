@@ -1,11 +1,12 @@
-import {SET_CURRENT_USER, ADD_ERROR} from '../actionTypes';
-import {apiCall} from '../../services/api';
+import {SET_CURRENT_USER} from '../actionTypes';
+import {apiCall,setTokenHeader} from '../../services/api';
 import {addError,removeError} from './errors';
 
 
-const root_URL = '/api/auth/';
 
-function setCurrentUser(user){
+//const root_URL = '/api/auth/';
+
+export function setCurrentUser(user){
   return{
     type:SET_CURRENT_USER,
     user
@@ -38,3 +39,7 @@ export function logout(){
   }
 }
 
+
+export function setAuthorizationToken(token){
+  setTokenHeader(token);
+}

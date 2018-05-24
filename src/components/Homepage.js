@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom';
 
+import FragranceList from '../containers/FragranceList';
 
 const Homepage = ({currentUser})=>{
   if(!currentUser.isAuthenticated){
@@ -13,7 +14,7 @@ const Homepage = ({currentUser})=>{
       </Link>
   </div>)
   }else{
-    return <div> RENDERING Fragrances...</div>
+    return <FragranceList/>
   }
 }
 

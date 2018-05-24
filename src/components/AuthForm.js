@@ -57,7 +57,8 @@ class AuthForm extends Component {
         <div className="col-md-6">
           
           <form onSubmit={this.handleSubmit}>
-
+            <h2>{heading}</h2>
+              {errors.message && <div className="alert alert-danger">{errors.message}</div>}
             <label htmlFor="email">Email:</label>
             <input
              type="text"
