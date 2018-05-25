@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
+
 import { apiCall } from '../services/api';
+import FragranceSection from '../components/FragranceSection';
+import CommentSection from '../components/CommentSection';
 
 class FragrancePage extends Component {
   
@@ -27,9 +30,8 @@ class FragrancePage extends Component {
 
     return (
       <div>
-        <h3>
-          {this.state.currentFragrance.brand}
-        </h3>
+        <FragranceSection currentFragrance={this.state.currentFragrance}/>
+        <CommentSection currentFragrance={this.state.currentFragrance}/>
       </div>
     )
   }
