@@ -27,7 +27,7 @@ const Main = (props) => {
         }}/>
         <Route exact path="/fragrances/new" component={withAuth(FragranceForm)} />)
         }}/>
-        <Route exact path ="/fragrances/:id" component={FragrancePage}/>
+        <Route exact path ="/fragrances/:id" component={(FragrancePage)}/>
       </Switch>
     </div>
   )

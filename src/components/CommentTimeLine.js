@@ -6,7 +6,10 @@ import CommentItem from './CommentItem';
 export default class CommentTimeLine extends Component {
   render() {
     const comments = this.props.comments.map((c)=>(
-      <CommentItem text={c.text} key={c._id} />
+      <li  key={c._id} className="list-group-item list-group-item-secondary">
+          <CommentItem text={c.text} />
+      </li>
+
     ));
 
     return (

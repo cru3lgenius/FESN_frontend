@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 import { apiCall } from '../services/api';
 import FragranceSection from '../components/FragranceSection';
@@ -29,7 +30,7 @@ class FragrancePage extends Component {
     }
 
     return (
-      <div>
+      <div className="container">
         <FragranceSection currentFragrance={this.state.currentFragrance}/>
         <CommentSection currentFragrance={this.state.currentFragrance}/>
       </div>

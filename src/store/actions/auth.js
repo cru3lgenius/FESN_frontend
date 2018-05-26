@@ -1,6 +1,7 @@
 import {SET_CURRENT_USER} from '../actionTypes';
 import {apiCall,setTokenHeader} from '../../services/api';
 import {addError,removeError} from './errors';
+import { fetchFragrances } from './fragrances';
 
 
 

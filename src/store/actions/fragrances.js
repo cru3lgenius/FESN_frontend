@@ -32,3 +32,14 @@ export function fetchFragrances(){
             });
   }
 }
+
+
+export function postNewComment(comment,fragranceId){
+  return dispatch => {
+    return apiCall('post',`/api/fragrances/${fragranceId}/comments`,comment)
+      .then(res=>{return res.data})
+      .catch(err=>{
+        dispatch(addError(err));
+      });
+  }
+}
