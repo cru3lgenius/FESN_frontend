@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
 
-import CommentTimeLine from './CommentTimeLine';
-import CommentForm from '../containers/CommentForm';
-import {postNewComment} from '../store/actions/fragrances';
+import CommentsList from '../components/CommentsList';
+import CommentForm from './CommentForm';
+import {postNewComment,deleteComment} from '../store/actions/fragrances';
 
 class CommentSection extends Component {
 
@@ -14,14 +14,14 @@ class CommentSection extends Component {
       comments:this.props.currentFragrance.comments
     }
     this.handleNewComment = this.handleNewComment.bind(this);
+    this.handleDeleteComment = this.handleDeleteComment.bind(this);
   }
+
   
   handleNewComment(event,newComment){
 
     event.preventDefault();
-    console.log(newComment);
     const {currentUser,currentFragrance} = this.props;
-     
     const comment = {
       author:{
         username:currentUser.user.username,
@@ -44,22 +44,25 @@ class CommentSection extends Component {
 
   }
 
+  handleDeleteComment(commentId){
+     const {currentFragrance} = this.props;
+     this.props.deleteComment(commentId,currentFragrance._id)
+          .then(deletedComment=>{
+            const newComments = this.state.comments.filter(c=>c._id!==commentId);
+            this.setState({comments:newComments});
+          })
+          .catch(err=>{})
+  }
+
   render() {
 
     const{currentFragrance,currentUser} = this.props;
     
- 
     return (
       <div>
-        {currentUser.isAuthenticated ? (
-          <CommentForm handleNewComment={this.handleNewComment} currentFragrance={currentFragrance}/>
-        ): (
-           <h3>To Write a Comment you need to sign in!</h3>
-        ) }
+        <CommentForm handleNewComment={this.handleNewComment} currentFragrance={currentFragrance}/>
         
-        <ul className="list-group">
-          <CommentTimeLine comments={this.state.comments}/>
-        </ul> 
+        <CommentsList currentUserId={currentUser.user.id} handleDelete= {this.handleDeleteComment} comments={this.state.comments}/>
       </div>
     )
   }
@@ -72,4 +75,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps,{postNewComment})(CommentSection);
+export default connect(mapStateToProps,{postNewComment,deleteComment})(CommentSection);

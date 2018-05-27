@@ -22,9 +22,7 @@ class AuthForm extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    //console.log(this.state);
     const authType = this.props.signUp ? "signup" : "signin";
-    console.log(this.props.onAuth);
     this.props.onAuth(authType,this.state).then(()=>{
                 this.props.history.push('/');
               })

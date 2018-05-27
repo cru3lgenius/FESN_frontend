@@ -1,9 +1,20 @@
 import React from 'react'
 
-export default ({text}) => {
+export default ({isCorrectUser,text,id,handleDelete}) => {
   return (
     <div>
-      {text}
+      <li className="list-group-item list-group-item-secondary">
+       {text}
+
+       {isCorrectUser && (
+          <button 
+            onClick={()=>{handleDelete(id)}}       
+            className="btn btn-danger">
+              Delete
+          </button>)}
+        
+      </li>
+      
     </div>
   )
 }

@@ -37,9 +37,17 @@ export function fetchFragrances(){
 export function postNewComment(comment,fragranceId){
   return dispatch => {
     return apiCall('post',`/api/fragrances/${fragranceId}/comments`,comment)
-      .then(res=>{return res.data})
+      .then(res=>res.data)
       .catch(err=>{
         dispatch(addError(err));
       });
+  }
+}
+
+export function deleteComment(commentId,fragranceId){
+  return dispatch =>{
+    return apiCall('delete',`/api/fragrances/${fragranceId}/comments/${commentId}`)
+            .then(deletedComment=>deleteComment)
+            .catch(err=>addError(err));
   }
 }

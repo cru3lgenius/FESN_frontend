@@ -15,7 +15,10 @@ export default function(ComponentToBeRendered){
       }
     }
     render(){
-      return <ComponentToBeRendered {...this.props}/>
+      if(!this.props.isAuthenticated)
+        return <div> LOADING... </div>
+      else
+        return <ComponentToBeRendered {...this.props}/>
     }
   }
 

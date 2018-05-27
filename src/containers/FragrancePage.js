@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 
 import { apiCall } from '../services/api';
 import FragranceSection from '../components/FragranceSection';
-import CommentSection from '../components/CommentSection';
+import CommentSection from './CommentSection';
 
 class FragrancePage extends Component {
   

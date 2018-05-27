@@ -25,9 +25,8 @@ const Main = (props) => {
         <Route exact path="/signup" render={props=>{
           return(<AuthForm errors={errors} removeError={removeError} onAuth={authUser} {...props} heading="Join The Fragrance Community Today!" buttonText={"Sign up"} signUp/>)
         }}/>
-        <Route exact path="/fragrances/new" component={withAuth(FragranceForm)} />)
-        }}/>
-        <Route exact path ="/fragrances/:id" component={(FragrancePage)}/>
+        <Route exact path="/fragrances/new" component={withAuth(FragranceForm)}/>
+        <Route exact path ="/fragrances/:id" component={withAuth(FragrancePage)}/>
       </Switch>
     </div>
   )

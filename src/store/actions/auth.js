@@ -20,6 +20,7 @@ export function authUser (type,userData){
       return apiCall("post",`/api/auth/${type}`,userData)
       .then(({data:{token,...user}})=>{
         localStorage.setItem("jwtToken",token);
+        setAuthorizationToken(token);
         dispatch(setCurrentUser(user));
         dispatch(removeError());
         resolve();
@@ -35,7 +36,8 @@ export function authUser (type,userData){
 
 export function logout(){
   return (dispatch)=>{
-    localStorage.clear();
+    localStorage.clear()
+    setAuthorizationToken(false);
     dispatch(setCurrentUser({}));
   }
 }
