@@ -11,30 +11,36 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand">
+      <nav className="navbar navbar-expand-md bg-light navbar-light sticky-top">
         <div className="container-fluid">
-          <div className="navbar-header">
-              <Link to="/"><img src="" alt="FESN Home"/></Link> 
+          <div className="navbar-brand">
+              <Link className="nav-link" to="/"><img src="" alt="FESN Home"/></Link> 
           </div>
-          {this.props.currentUser.isAuthenticated ? (
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <Link to={`/fragrances/new`}>Add New Fragrance</Link>
-              </li>
-              <li>
-                <a onClick={this.logout}>Logout</a>
-              </li>
-            </ul>
-          ):(
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <Link to="/signin">Login</Link>
-              </li>
-              <li>
-                <Link to="/signup">Register</Link>                       
-              </li>
-            </ul> 
-          )}
+          <button className="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarResponsive" className="navbar-collapse collapse">
+            {this.props.currentUser.isAuthenticated ? (
+              <ul className="nav navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to={`/fragrances/new`}>Add New Fragrance</Link>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" onClick={this.logout}>Logout</a>
+                </li>
+              </ul>
+            ):(
+              <ul className="nav navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link"  to="/signin">Login</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/signup">Register</Link>                       
+                </li>
+              </ul> 
+            )}
+          </div>
+          
         </div>
       </nav>
     )
