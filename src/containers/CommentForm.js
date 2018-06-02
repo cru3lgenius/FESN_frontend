@@ -26,18 +26,16 @@ class CommentForm extends Component {
   render() {
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="comment">
-        Write your comment:
-        </label>
-        <input
-          className="form-control"
-          name="comment"
-          value={this.state.comment}
-          onChange={this.handleChange}
-        />
-        <button type="submit" className="btn btn-success">Add Comment</button>
-      </form>
+      <div className="container pb-4 mt-5 mb-5 comment-form"> 
+          <input 
+            placeholder="Write your comment here!"
+            className="form-control"
+            name="comment"
+            value={this.state.comment}
+            onChange={this.handleChange}/> 
+          <button onClick={this.handleSubmit} type="submit" className="btn btn-primary pull-right">Share</button>
+      </div>
+      
     )
   }
 }

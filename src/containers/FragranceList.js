@@ -25,8 +25,18 @@ class FragranceList extends Component {
     ))
 
     return (
-      <div>
-        {fragranceList}
+      <div className="container">
+        <div className="row">
+          <div class="container-fluid mt-5 mb-5 bg-light-gray">
+            <div class="row">
+              <h3>All Fragrances</h3>
+            </div>
+            <div class="row">
+              <div class="underline"></div>
+            </div>
+          </div>
+          {fragranceList}
+        </div>
       </div>
     )
   }

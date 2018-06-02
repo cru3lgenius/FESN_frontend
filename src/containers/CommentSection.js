@@ -59,10 +59,9 @@ class CommentSection extends Component {
     const{currentFragrance,currentUser} = this.props;
     
     return (
-      <div>
-        <CommentForm handleNewComment={this.handleNewComment} currentFragrance={currentFragrance}/>
-        
+      <div className="col-12">
         <CommentsList currentUserId={currentUser.user.id} handleDelete= {this.handleDeleteComment} comments={this.state.comments}/>
+        <CommentForm handleNewComment={this.handleNewComment} currentFragrance={currentFragrance}/>
       </div>
     )
   }

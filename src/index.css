@@ -50,7 +50,7 @@ html,body{
 }
 
 .btn-primary{
-  background-color:black ;
+  background-color:#432c85;
   font-weight: bold;
   border:1px solid grey;
   transition: all 0.15s linear;
@@ -58,7 +58,7 @@ html,body{
 
 .btn-primary:hover{
   transform: scale(1.1);
-  background-color:black;
+  background-color:#432c85;
   border:1px solid grey;
   text-decoration: underline;
 }
@@ -66,7 +66,26 @@ html,body{
 .fragrance-item{
   color:black;
 }
-
-.card-img-top{
-  max-width: 400px;
+ 
+.card-body{
+  text-align: center;
 }
+
+.comment-form{
+  border:2px solid #ddd;
+  padding-top:30px;
+}
+
+#page-header{
+  height:200px;
+  background:url('../src/images/sky2.jpg');
+  background-position:0 -1250px;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  color:#fff;
+  border-bottom:1px #eee solid;
+  padding-top:50px;
+  text-shadow: 0 0 8px #66757f;
+}
+
+.underline{width: 100px; height: 2px; background-color: #311B92;}

@@ -16,7 +16,7 @@ const Main = (props) => {
   const {currentUser,authUser,errors,removeError} = props;
 
   return(
-    <div className="container">
+    <div>
       <Switch>
         <Route exact path="/" render={props=><Homepage currentUser={currentUser} {...props}/>}/>  
         <Route exact path="/signin" render={props=>{

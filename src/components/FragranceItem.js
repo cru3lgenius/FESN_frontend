@@ -3,16 +3,19 @@ import DefaultFragranceImage from '../images/default-fragrance-image.jpg';
 import {Link} from 'react-router-dom';
 
 const FragranceItem = ({id,brand,name,date,uploadedBy,fragranceImage})=>(
-  <Link to={`/fragrances/${id}`} className="fragrance-item">
-    <li className="list-group-item">
-      <img height="150" width="150" src={fragranceImage || DefaultFragranceImage} alt={name}/>
-      <div className="fragrance-area">
-        <div>Brand: {brand} </div>
-        <div>Name: {name} </div>
-        <div> Uploaded By: {uploadedBy} </div>
-      </div> 
-    </li>
-  </Link>
+    <div className="col-sm-6 col-md-4 col-lg-3">    
+        <div className="card">
+            <img className="card-img-top" src={fragranceImage || DefaultFragranceImage} alt={name}/>
+            <div className="card-body">
+                <h5>Brand: {brand} </h5>
+                <h6>Name: {name} </h6>
+                <h6> Uploaded By: {uploadedBy} </h6>
+            </div> 
+            <Link className="btn btn-primary btn-lg m-5" to={`/fragrances/${id}`}>
+                <i class="fas fa-ellipsis-h"></i>
+            </Link>
+        </div>
+    </div>
 )
 
 
