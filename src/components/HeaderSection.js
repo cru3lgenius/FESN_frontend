@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => {
+ const HeaderSection = () => {
   return (
     <header id="page-header">
       <div className="cell">
@@ -19,3 +19,5 @@ export default () => {
     </header>
   );
 };
+
+export default HeaderSection;

@@ -3,8 +3,8 @@ import DefaultFragranceImage from '../images/default-fragrance-image.jpg';
 import {Link} from 'react-router-dom';
 
 const FragranceItem = ({id,brand,name,date,uploadedBy,fragranceImage})=>(
-    <div className="col-sm-6 col-lg-3">    
-        <div className="card">
+    <div className="col-sm-6 col-lg-4">    
+        <div className="card m-4">
             <img className="card-img-top" src={fragranceImage || DefaultFragranceImage} alt={name}/>
             <div className="card-body">
                 <h5>Brand: {brand} </h5>

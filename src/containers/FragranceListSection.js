@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import FragranceItem from '../components/FragranceItem';
 import {fetchFragrances} from '../store/actions/fragrances';
 
-class FragranceList extends Component {
+class FragranceListSection extends Component {
   
   componentDidMount(){
     this.props.fetchFragrances();
@@ -16,7 +16,7 @@ class FragranceList extends Component {
     const hiddenFragrances = [];
     const {fragrances} = this.props;
     for(var i = 0 ; i < fragrances.length; i++){
-      if(i<4){
+      if(i<3){
         const fragrance = fragrances[i];
         fragranceList.push(
           <FragranceItem
@@ -48,11 +48,11 @@ class FragranceList extends Component {
      
 
     return (
-      <div className="container">
+      <div  className="container">
         <div className="row">
           <div className="container-fluid mt-5 mb-5 bg-light-gray">
             <div className="row">
-              <h3>All Fragrances</h3>
+              <h3 id="fragrancelist">All Fragrances</h3>
             </div>
             <div className="row">
               <div className="underline"></div>
@@ -83,4 +83,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps,{fetchFragrances})(FragranceList);
+export default connect(mapStateToProps,{fetchFragrances})(FragranceListSection);

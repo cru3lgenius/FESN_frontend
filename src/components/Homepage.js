@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-import FragranceList from '../containers/FragranceList';
+import FragranceList from '../containers/FragranceListSection';
 import Footer from './Footer';
-import Header from './Header';
+import HeaderSection from './HeaderSection';
+import ServicesSection from './ServicesSection';
+import TeamSection from './TeamSection';
 
 const Homepage = ({currentUser})=>{
   if(!currentUser.isAuthenticated){
@@ -19,8 +21,10 @@ const Homepage = ({currentUser})=>{
   }else{
     return (
       <div>
-        <Header/>
+        <HeaderSection/>
         <FragranceList/>
+        <ServicesSection/>
+        <TeamSection/>
         <Footer/>
       </div>
       

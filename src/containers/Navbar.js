@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { logout } from "../store/actions/auth";
-import $ from "jquery";
+ 
 
 class Navbar extends Component {
   logout = e => {
@@ -69,7 +69,7 @@ class Navbar extends Component {
             data-target="#navbarResponsive"
             data-toggle="collapse"
           >
-            <span className="navbar-toggler-icon" />
+            <i className="fa fa-bars"></i>
           </button>
           <div id="navbarResponsive" className="navbar-collapse collapse">
             {this.props.currentUser.isAuthenticated ? (
