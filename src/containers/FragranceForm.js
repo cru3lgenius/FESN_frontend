@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux';
-
 import {postNewFragrance} from '../store/actions/fragrances';
 
 class FragranceForm extends Component {
@@ -44,33 +43,35 @@ class FragranceForm extends Component {
   render() {
     const {brand,name,imageUrl} = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="brand">Brand:</label>
-        <input
-          className="form-control" 
-          id="brand"
-          name="brand"
-          value={brand}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="name">Name:</label>
-        <input 
-          className="form-control"         
-          id="name"
-          name="name"
-          value={name}
-          onChange={this.handleChange}
-        />
-        <label htmlFor="brand">Fragrance Image URL:</label>
-        <input 
-          id="imageUrl"
-          className="form-control"           
-          name="imageUrl"
-          value={imageUrl}
-          onChange={this.handleChange}
-        />
-        <button type="submit" className="btn btn-primary">Submit!</button>
-      </form>
+      <div className="container">
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="brand">Brand:</label>
+          <input
+            className="form-control" 
+            id="brand"
+            name="brand"
+            value={brand}
+            onChange={this.handleChange}
+          />
+          <label htmlFor="name">Name:</label>
+          <input 
+            className="form-control"         
+            id="name"
+            name="name"
+            value={name}
+            onChange={this.handleChange}
+          />
+          <label htmlFor="brand">Fragrance Image URL:</label>
+          <input 
+            id="imageUrl"
+            className="form-control"           
+            name="imageUrl"
+            value={imageUrl}
+            onChange={this.handleChange}
+          />
+          <button type="submit" className="btn btn-primary">Submit!</button>
+        </form>
+      </div>
     )
   }
 }

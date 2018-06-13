@@ -76,16 +76,43 @@ html,body{
   padding-top:30px;
 }
 
-#page-header{
-  height:200px;
-  background:url('../src/images/sky2.jpg');
-  background-position:0 -1250px;
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  color:#fff;
-  border-bottom:1px #eee solid;
-  padding-top:50px;
-  text-shadow: 0 0 8px #66757f;
+ 
+.underline{width: 100px; height: 2px; background-color: #311B92;}
+
+#main-nav.navbar-shrink {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black;
+  color:white;
 }
 
-.underline{width: 100px; height: 2px; background-color: #311B92;}
+#main-nav a {
+  color: white;
+}
+
+#page-header{
+  display:table;
+  width:100vw;
+  height:100vh;
+  padding:150px 0;
+  text-align:center;
+  color:white;
+  background:url('./images/black-and-white-clouds-dark.jpg') no-repeat bottom center scroll;
+  background-color:black;
+  background-size:cover;
+  text-shadow: 0 5px 10px black;
+}
+
+#page-header .cell {
+  display:table-cell;
+  vertical-align:middle;
+}
+
+#page-header .header-heading{
+  font-size:40px;
+}
+
+#page-header .header-text{
+  font-size:1.1em;
+}
