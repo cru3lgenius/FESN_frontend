@@ -1,25 +1,33 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import CommentItem from './CommentItem';
-
+import CommentItem from "./CommentItem";
 
 class CommentsList extends Component {
-
   render() {
-    const comments = this.props.comments.map((c)=>(
-        <CommentItem 
-          isCorrectUser={this.props.currentUserId === c.author.id} 
-          id={c._id} 
-          handleDelete={this.props.handleDelete} 
-          key={c._id} 
-          text={c.text} />
+    const comments = this.props.comments.map(c => (
+      <CommentItem
+        isCorrectUser={this.props.currentUserId === c.author.id}
+        id={c._id}
+        handleDelete={this.props.handleDelete}
+        key={c._id}
+        text={c.text}
+      />
     ));
 
     return (
-      <ul className="list-group">
-        {comments}
-      </ul>
-    )
+      <div className="container">
+        <div className="row text-white">
+          <h3 id="fragrancelist">Comments</h3>
+        </div>
+        <div className="row mb-5">
+          <div className="underline" />
+        </div>
+
+        <ul className="container" className="list-group">
+          {comments}
+        </ul>
+      </div>
+    );
   }
 }
 

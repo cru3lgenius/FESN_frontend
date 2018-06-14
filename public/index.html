@@ -46,19 +46,23 @@
   </body>
   <script>
 
-  $("body").scrollspy({target:"#main-nav"});
-  
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#main-nav").offset().top > 100) {
-      $("#main-nav").addClass("navbar-shrink");
-    } else {
-      $("#main-nav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+      $("body").scrollspy({ target: "#main-nav" });
+
+      // Collapse Navbar
+      var navbarCollapse = function() {
+        if ($("#main-nav").offset().top > 100) {
+          $("#main-nav").addClass("navbar-shrink");
+        } else {
+          $("#main-nav").removeClass("navbar-shrink");
+        }
+      };
+      // Collapse now if page is not at top
+      navbarCollapse();
+      // Collapse the navbar when page is scrolled
+      $(window).scroll(navbarCollapse);
+
+
+       
+
   </script>
 </html>
