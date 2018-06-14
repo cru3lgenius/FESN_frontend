@@ -22,8 +22,8 @@ const Homepage = ({currentUser})=>{
     return (
       <div>
         <HeaderSection/>
-        <FragranceList/>
         <ServicesSection/>
+        <FragranceList/>
         <TeamSection/>
         <Footer/>
       </div>

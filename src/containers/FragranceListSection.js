@@ -48,14 +48,13 @@ class FragranceListSection extends Component {
      
 
     return (
-      <div  className="container">
+      <div  className="container-fluid bg-white p-5">
         <div className="row">
-          <div className="container-fluid mt-5 mb-5 bg-light-gray">
-            <div className="row">
-              <h3 id="fragrancelist">All Fragrances</h3>
-            </div>
-            <div className="row">
-              <div className="underline"></div>
+          <div className="container-fluid mb-5 bg-light-gray">
+            <div className="row text-center">
+              <div className="col-12">
+                <h1 className="font-weight-bold">All Fragrances</h1>
+              </div>
             </div>
           </div>
           <div className="row">

@@ -6,6 +6,7 @@ html,body{
   width:100%;
   font-family: 'Poppins', sans-serif;
   color:#222;
+  background-color: black;
 }
 
 .nav-link{
@@ -123,6 +124,7 @@ html,body{
 
 .fa-connectdevelop, .fa-clock, .fa-database{
   font-size:4em;
+  color:#42dca3;
 }
 
 .team-member {
@@ -145,3 +147,30 @@ html,body{
 .team-member p {
   margin-top: 0;
 }
+
+.fa-facebook-f, .fa-youtube, .fa-twitter{
+  font-size:2em;
+  margin:2px;
+  color:grey;
+}
+
+
+ul.social-buttons{
+  padding:0;
+}
+
+ .fa-youtube:hover{
+   color:#cd201f;
+ }
+
+ .fa-twitter:hover{
+   color:#1ab7ea;
+ }
+ 
+ .fa-facebook-f:hover{
+   color:#3b5999;
+ }
+
+ .text-muted-alien{
+  color:#42dca3;
+ }

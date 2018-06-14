@@ -4,7 +4,7 @@ import React from "react";
   return (
     <header id="page-header">
       <div className="cell">
-        <div className="container mb-5">
+        <div className="container">
           <div className="row">
             <div className="m-auto text-center col-md-6">
               <h1 className="header-heading">The Fragrance Enthusiasts Social Network</h1>
