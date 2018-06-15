@@ -79,12 +79,30 @@ html,body{
  
 .underline{width: 100px; height: 2px; background-color: white;}
 
+#main-nav {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+  -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+  transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+  letter-spacing: 1px;
+  border-bottom: none;
+  background: transparent;
+}
 #main-nav.navbar-shrink {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: black;
-  color:grey;
+  background: black;
+}
+#main-nav .nav-link.active {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#main-nav .nav-link.active:hover {
+  color: white;
 }
 
 #main-nav a {
@@ -192,3 +210,9 @@ ul.social-buttons{
   height:auto;
   display:block;
 }
+
+.mt-120{
+  margin-top:120px;
+}
+
+ 

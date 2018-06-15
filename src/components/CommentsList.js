@@ -6,6 +6,8 @@ class CommentsList extends Component {
   render() {
     const comments = this.props.comments.map(c => (
       <CommentItem
+        profileImageUrl={c.author.profileImageUrl}
+        author={c.author.username}
         isCorrectUser={this.props.currentUserId === c.author.id}
         id={c._id}
         handleDelete={this.props.handleDelete}

@@ -25,17 +25,17 @@ const TeamSection = () => {
             <ul className="inline-list social-buttons">
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
             </ul>
@@ -80,17 +80,17 @@ const TeamSection = () => {
             <ul className="inline-list social-buttons">
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-youtube"></i>
+                  <i className="fab fa-youtube"></i>
                 </a>
               </li>
               <li className="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-twitter"></i>
+                  <i className="fab fa-twitter"></i>
                 </a>
               </li>
             </ul>

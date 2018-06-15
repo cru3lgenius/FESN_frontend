@@ -21,7 +21,8 @@ class CommentSection extends Component {
     const comment = {
       author: {
         username: currentUser.user.username,
-        id: currentUser.user.id
+        id: currentUser.user.id,
+        profileImageUrl:currentUser.user.profileImageUrl
       },
       text: newComment,
       forFragrance: {

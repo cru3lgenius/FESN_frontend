@@ -43,9 +43,10 @@ class FragranceForm extends Component {
   render() {
     const {brand,name,imageUrl} = this.state;
     return (
-      <div className="container">
+      <div className="container mt-120 text-center text-white">
+        <h2 className="font-weight-bold mb-3">NEW FRAGRANCE</h2>
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="brand">Brand:</label>
+          <label className="m-3" htmlFor="brand">Brand:</label>
           <input
             className="form-control" 
             id="brand"
@@ -53,7 +54,7 @@ class FragranceForm extends Component {
             value={brand}
             onChange={this.handleChange}
           />
-          <label htmlFor="name">Name:</label>
+          <label className="m-3" htmlFor="name">Name:</label>
           <input 
             className="form-control"         
             id="name"
@@ -61,7 +62,7 @@ class FragranceForm extends Component {
             value={name}
             onChange={this.handleChange}
           />
-          <label htmlFor="brand">Fragrance Image URL:</label>
+          <label className="m-3" htmlFor="brand">Fragrance Image URL:</label>
           <input 
             id="imageUrl"
             className="form-control"           
@@ -69,7 +70,7 @@ class FragranceForm extends Component {
             value={imageUrl}
             onChange={this.handleChange}
           />
-          <button type="submit" className="btn btn-primary">Submit!</button>
+          <button type="submit" className="btn btn-primary mt-4">Submit!</button>
         </form>
       </div>
     )

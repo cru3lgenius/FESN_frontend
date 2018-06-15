@@ -2,16 +2,21 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { logout } from "../store/actions/auth";
- 
+import ScrollSpy from 'react-scrollspy'; 
+import $ from 'jquery';
+
 
 class Navbar extends Component {
+
+ 
   logout = e => {
     e.preventDefault();
     this.props.logout();
   };
 
   render() {
-    
+
+
     let authNavbarLinks = (
       <ul className="nav navbar-nav ml-auto">
         <li className="nav-item">
@@ -25,7 +30,7 @@ class Navbar extends Component {
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link js-scroll-trigger" href="#team">
+          <a className="js-scroll-trigger nav-link" href="#team">
             TEAM
           </a>
         </li>

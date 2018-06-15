@@ -29,7 +29,7 @@ class FragrancePage extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="container mt-120">
         <FragranceSection currentFragrance={this.state.currentFragrance}/>
         <CommentSection currentFragrance={this.state.currentFragrance}/>
       </div>
