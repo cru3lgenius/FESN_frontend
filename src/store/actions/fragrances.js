@@ -13,7 +13,8 @@ function loadFragrances(fragrances){
 export function postNewFragrance(fragranceBody){
   return (dispatch,getState) => {
     return apiCall("post",`/api/fragrances/`,fragranceBody)
-          .then(res=>{})
+          .then(res=>{
+          })
           .catch(err=>{
             dispatch(addError(err.message))
           });

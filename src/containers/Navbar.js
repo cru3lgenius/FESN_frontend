@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { logout } from "../store/actions/auth";
-import ScrollSpy from 'react-scrollspy'; 
-import $ from 'jquery';
-
 
 class Navbar extends Component {
 

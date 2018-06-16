@@ -2,10 +2,7 @@ import React from "react";
 
 const FragranceSection = ({ currentFragrance }) => {
   return (
-    <section
-      id="fragrance-list"
-      className="container mt-5 mb-5"
-    >
+    <section id="fragrance-list" className="container mt-5 mb-5">
       <div className="row d-flex justify-content-center">
         <div className="col-md-6">
           <div className="card">
@@ -14,10 +11,16 @@ const FragranceSection = ({ currentFragrance }) => {
               src={currentFragrance.imageUrl}
               alt={currentFragrance.name}
             />
-            <h4 className="mt-3">Description:</h4>
+
             <p className="card-body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti,
-              quidem.
+              <h6 className="font-weight-bold mt-3">Description:</h6>
+              <p className="font-italic"> {currentFragrance.description}</p>
+              <h6 className="font-weight-bold mt-3">Occasion:</h6>
+              <p className="font-italic">{currentFragrance.occasion}</p>
+              <h6 className="font-weight-bold mt-3">Season:</h6>
+              <p className="font-italic"> {currentFragrance.season}</p>
+              <h6 className="font-weight-bold mt-3">Performance:</h6>
+              <p className="font-italic"> {currentFragrance.performance}</p>
             </p>
           </div>
         </div>
