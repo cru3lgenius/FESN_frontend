@@ -7,7 +7,12 @@ class AuthForm extends Component {
       email: "",
       password: "",
       profileImageUrl: "",
-      username: ""
+      username: "",
+
+      facebook: "",
+      youtube: "",
+      twitter: "",
+      communityRole: "Fragrance Enthusiast"
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,9 +24,21 @@ class AuthForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    const payload = {
+      email:this.state.email,
+      username:this.state.username,
+      profileImageUrl:this.state.profileImageUrl,
+      password:this.state.password,
+      socialMediaLinks:{
+        facebook:this.state.facebook,
+        youtube:this.state.youtube,
+        twitter:this.state.twitter
+      },
+      communityRole:this.state.communityRole
+    } 
     const authType = this.props.signUp ? "signup" : "signin";
     this.props
-      .onAuth(authType, this.state)
+      .onAuth(authType, payload)
       .then(() => {
         this.props.history.push("/");
       })
@@ -33,12 +50,17 @@ class AuthForm extends Component {
       email: "",
       password: "",
       profileImageUrl: "",
-      username: ""
+      username: "",
+
+      facebook: "",
+      youtube: "",
+      twitter: ""
     });
   }
 
   render() {
-    const { password, username, email, profileImageUrl } = this.state;
+    const { password, username, email, profileImageUrl, facebook,youtube,twitter } = this.state;
+ 
     const {
       signUp,
       buttonText,
@@ -61,17 +83,22 @@ class AuthForm extends Component {
               {errors.message && (
                 <div className="alert alert-danger">{errors.message}</div>
               )}
-              <label className="m-3" htmlFor="email">Email:</label>
+              <label className="m-3" htmlFor="email">
+                Email:
+              </label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 className="form-control"
                 value={email}
                 onChange={this.handleChange}
+                required
               />
 
-              <label className="m-3" htmlFor="password">Password:</label>
+              <label className="m-3" htmlFor="password">
+                Password:
+              </label>
               <input
                 type="password"
                 id="password"
@@ -79,21 +106,27 @@ class AuthForm extends Component {
                 className="form-control"
                 onChange={this.handleChange}
                 value={password}
+                required
               />
 
               {signUp && (
                 <div>
-                  <label className="m-3" htmlFor="username">Username:</label>
+                  <label className="m-3" htmlFor="username">
+                    Username:
+                  </label>
                   <input
                     type="text"
                     id="username"
                     name="username"
                     className="form-control"
                     value={username}
+                    required
                     onChange={this.handleChange}
                   />
 
-                  <label className="m-3" htmlFor="image-url">Image URL:</label>
+                  <label className="m-3" htmlFor="image-url">
+                    Image URL:
+                  </label>
                   <input
                     type="text"
                     id="image-url"
@@ -102,6 +135,53 @@ class AuthForm extends Component {
                     value={profileImageUrl}
                     onChange={this.handleChange}
                   />
+
+                  <div className="row mt-3">
+                    <div className="col">
+                      <div className="form-group">
+                        <label htmlFor="facebook-link">Facebook:</label>
+                        <input
+                          type="text"
+                          placeholder="Your account"
+                          id="facebook-link"
+                          value={facebook}
+                          onChange={this.handleChange}
+                          name="facebook"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col">
+                      <div className="form-group">
+                        <label htmlFor="twitter-link">Twitter:</label>
+                        <input
+                          type="text"
+                          placeholder="Your account"
+                          id="twitter-link"
+                          value={twitter}
+                          onChange={this.handleChange}
+                          name="twitter"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col">
+                      <div className="form-group">
+                        <label htmlFor="youtube-link">Youtube:</label>
+                        <input
+                          type="text"
+                          placeholder="Your account"
+                          id="youtube-link"
+                          value={youtube}
+                          onChange={this.handleChange}
+                          name="youtube"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
               <button type="submit" className="btn btn-primary mt-4">

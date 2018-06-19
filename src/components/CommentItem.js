@@ -11,7 +11,7 @@ export default ({
 }) => {
   return (
     <li className="row comment">
-      <div className="d-none d-md-block   ">
+      <div className="d-none d-md-block">
         <img
           className="rounded-circle"
           src={profileImageUrl || defaultProfileImage}
@@ -29,7 +29,7 @@ export default ({
                 }}
                 className="close-symbol ml-auto mr-3"
               >
-                <i class="text-danger fas fa-times" />
+                <i className="text-danger fas fa-times" />
               </a>
             )}
           </div>

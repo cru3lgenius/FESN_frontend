@@ -198,6 +198,7 @@ ul.social-buttons{
   margin-left: 100px;
   min-height: 60px;
   position: relative;
+  overflow:auto;
   padding: 15px;  
   margin:3px;
   background-color: #fcfcfc;
@@ -241,4 +242,40 @@ ul.social-buttons{
 
 .fragrance-item-caption-content{
   font-size: 30px;
+}
+
+.profile{
+  border:1px solid white;
+  padding:0;
+  background-color: black;
+}
+
+.profile img {
+  display:inline-block;
+  max-width: 250px;
+  max-height:250px;
+  padding:0;
+  margin:0;
+  border:3px solid white;
+  border-radius: 50%;
+}
+
+.profile .description{
+  display: inline-block;
+  overflow: hidden;
+}
+
+@media screen and (min-width:992px) {
+  .profile img {
+    display:inline-block;
+    max-width: 300px;
+    max-height:300px;
+    border: none;
+    border-radius: 0;
+  
+  }
+  .profile div[class^="col-"]{
+    padding: 0;
+  }
+
 }

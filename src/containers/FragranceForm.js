@@ -117,6 +117,7 @@ class FragranceForm extends Component {
                   value={season}
                   placeholder="Season"
                   onChange={this.handleChange}
+                  required
                 >
                   <option value="">Choose...</option>
                   <option value="Spring">Spring</option>

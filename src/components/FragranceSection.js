@@ -12,7 +12,7 @@ const FragranceSection = ({ currentFragrance }) => {
               alt={currentFragrance.name}
             />
 
-            <p className="card-body">
+            <div className="card-body">
               <h6 className="font-weight-bold mt-3">Description:</h6>
               <p className="font-italic"> {currentFragrance.description}</p>
               <h6 className="font-weight-bold mt-3">Occasion:</h6>
@@ -21,7 +21,7 @@ const FragranceSection = ({ currentFragrance }) => {
               <p className="font-italic"> {currentFragrance.season}</p>
               <h6 className="font-weight-bold mt-3">Performance:</h6>
               <p className="font-italic"> {currentFragrance.performance}</p>
-            </p>
+            </div>
           </div>
         </div>
       </div>
