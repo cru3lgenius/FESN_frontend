@@ -252,20 +252,18 @@ ul.social-buttons{
 }
 
 .profile .background{
-  width: 96%;
-  height:96%;
+  width: 99%;
+  height:99%;
   position:absolute;
-  left:2%;
-  top:2%;
-  opacity: 0.9;
-  border:1px solid #42DCA3;
+  left:0.5%;
+  top:0.5%;
+  opacity: 0.85;
+  border:0.3px solid white;
   filter:  blur(6px);
-  transition: all 0.35s ease;
   background: black;
 }
 
 .profile:hover .background{
-  transform:scale(1.01);
   opacity: 0.97;
 }
 .profile .profile-img {

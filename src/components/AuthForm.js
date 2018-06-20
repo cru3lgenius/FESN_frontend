@@ -12,7 +12,7 @@ class AuthForm extends Component {
       facebook: "",
       youtube: "",
       twitter: "",
-      communityRole: "Fragrance Enthusiast"
+      communityRole: "Enthusiast"
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
