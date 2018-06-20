@@ -1,5 +1,5 @@
 import React from "react";
-import team_member_1 from "../images/team/1.jpg";
+import team_member_1 from "../images/team/3.jpg";
 
 const Profile = () => {
   return (
@@ -7,12 +7,13 @@ const Profile = () => {
       <div className="cell p-3">
         <div className="container">
           <div className="row">
-            <div className="profile m-auto col-md-8">
+            <div className="profile bg-dark m-auto col-xs-8 col-md-6 col-lg-5">
+              <div className="background"></div>
               <div className="container">
-                <div className="d-md-flex row">
-                  <img className="m-auto m-lg-0" src={team_member_1} alt="" />
+                <div className="d-md-flex row py-5">
+                  <img className="profile-img m-auto" src={team_member_1} alt="" />
 
-                  <div className="m-auto col-sm-12 col-md-6">
+                  <div className="m-auto col-sm-12">
                     <h6 className="font-weight-bold mt-3">Username:</h6>
                     <p className="font-italic text-muted-alien">eliexao </p>
                     <h6 className="font-weight-bold mt-3">

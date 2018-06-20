@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import $ from 'jquery';
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import { logout } from "../store/actions/auth";
@@ -11,8 +12,13 @@ class Navbar extends Component {
     this.props.logout();
   };
 
-  render() {
+  componentDidMount(){
+    $('body').click(function(){
+      $('.navbar-collapse').removeClass('show');
+    });
+  }
 
+  render() {
 
     let authNavbarLinks = (
       <ul className="nav navbar-nav ml-auto">
