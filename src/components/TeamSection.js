@@ -15,13 +15,12 @@ const TeamSection = () => {
       <div className="d-flex justify-content-center row">
         <div className="col-sm-12 col-md-6 col-lg-4">
           <div className="team-member">
-            <Link to="/fragrances/new">
-              <img
-                className="mx-auto rounded-circle"
-                src={team_member_1}
-                alt=""
-              />
-            </Link>
+            <img
+              className="mx-auto rounded-circle"
+              src={team_member_1}
+              alt=""
+            />
+
             <h4 className="text-white">Tommy Johnes</h4>
             <p className="text-muted-alien">Web Developer</p>
             <ul className="inline-list social-buttons">
@@ -45,13 +44,12 @@ const TeamSection = () => {
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4">
           <div className="team-member">
-            <Link to="/fragrances/new">
-              <img
-                className="mx-auto rounded-circle"
-                src={team_member_2}
-                alt=""
-              />
-            </Link>
+            <img
+              className="mx-auto rounded-circle"
+              src={team_member_2}
+              alt=""
+            />
+
             <h4 className="text-white">Ellie Xao</h4>
             <p className="text-muted-alien">Fragrance Reviewer</p>
             <ul className="inline-list social-buttons">
@@ -75,13 +73,12 @@ const TeamSection = () => {
         </div>
         <div className="col-sm-12 col-md-6 col-lg-4">
           <div className="team-member">
-            <Link to="/fragrances/new">
-              <img
-                className="mx-auto rounded-circle"
-                src={team_member_3}
-                alt=""
-              />
-            </Link>
+            <img
+              className="mx-auto rounded-circle"
+              src={team_member_3}
+              alt=""
+            />
+
             <h4 className="text-white">Matt Balley</h4>
             <p className="text-muted-alien">Web Designer</p>
             <ul className="inline-list social-buttons">

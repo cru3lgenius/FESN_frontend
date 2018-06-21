@@ -10,23 +10,17 @@ class FragranceListSection extends Component {
   }
 
   render() {
-    const fragranceList = [];
-
-    const { fragrances } = this.props;
-    for (var i = 0; i < 4 && i < fragrances.length; i++) {
-      const fragrance = fragrances[i];
-      fragranceList.push(
-        <FragranceItem
-          key={fragrance._id}
-          date={fragrance.createdAt}
-          name={fragrance.name}
-          brand={fragrance.brand}
-          uploadedBy={fragrance.uploadedBy.username}
-          fragranceImage={fragrance.imageUrl}
-          id={fragrance._id}
-        />
-      );
-    }
+    const fragranceList = this.props.fragrances.map(fragrance => (
+      <FragranceItem
+        key={fragrance._id}
+        date={fragrance.createdAt}
+        name={fragrance.name}
+        brand={fragrance.brand}
+        uploadedBy={fragrance.uploadedBy.username}
+        fragranceImage={fragrance.imageUrl}
+        id={fragrance._id}
+      />
+    ));
 
     return (
       <div className="container-fluid bg-white p-5">

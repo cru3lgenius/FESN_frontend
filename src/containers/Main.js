@@ -10,7 +10,7 @@ import FragranceForm from './FragranceForm.js';
 import withAuth from '../hocs/withAuth.js';
 import FragrancePage from './FragrancePage';
 import Profile from '../components/Profile';
-
+import NotFound from '../components/NotFound';
 
 const Main = (props) => {
 
@@ -29,6 +29,8 @@ const Main = (props) => {
         <Route exact path="/fragrances/new" component={withAuth(FragranceForm)}/>
         <Route exact path ="/fragrances/:id" component={withAuth(FragrancePage)}/>
         <Route exact path="/users/:id" component={withAuth(Profile)}/>
+        <Route component={NotFound}/>
+        
       </Switch>
     </div>
   )

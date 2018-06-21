@@ -38,7 +38,7 @@ class Profile extends Component {
     const { currentProfile } = this.state;
 
     return (
-      <header id="page-header">
+      <div id="page-header">
         <div className="cell p-3">
           <div className="container">
             <div className="row">
@@ -111,7 +111,7 @@ class Profile extends Component {
             </div>
           </div>
         </div>
-      </header>
+      </div>
     );
   }
 }

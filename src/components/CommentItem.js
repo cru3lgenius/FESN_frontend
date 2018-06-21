@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import defaultProfileImage from "../images/Anonymous.jpg";
 
 export default ({
@@ -7,16 +8,19 @@ export default ({
   id,
   handleDelete,
   profileImageUrl,
-  author
+  author,
+  authorId
 }) => {
   return (
     <li className="row comment">
       <div className="d-none d-md-block">
-        <img
-          className="rounded-circle"
-          src={profileImageUrl || defaultProfileImage}
-          alt="Image"
-        />
+        <Link to={`/users/${authorId}`}>
+          <img
+            className="rounded-circle"
+            src={profileImageUrl || defaultProfileImage}
+            alt="Image"
+          />
+        </Link>
       </div>
       <div className="col-xs-12 col-md-10">
         <div className="comment-box">

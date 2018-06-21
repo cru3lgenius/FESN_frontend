@@ -8,6 +8,7 @@ class CommentsList extends Component {
       <CommentItem
         profileImageUrl={c.author.profileImageUrl}
         author={c.author.username}
+        authorId={c.author.id}
         isCorrectUser={this.props.currentUserId === c.author.id}
         id={c._id}
         handleDelete={this.props.handleDelete}

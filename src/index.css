@@ -97,6 +97,7 @@ html,body{
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   background: black;
 }
+
 #main-nav .nav-link.active {
   outline: none;
   background-color: rgba(255, 255, 255, 0.3);
@@ -133,6 +134,14 @@ html,body{
 
 #page-header .header-text{
   font-size:1.1em;
+}
+
+#page-header .not-found-heading{
+  font-size:60px;
+}
+
+#page-header .not-found-text{
+  font-size:1.3em;
 }
 
 #main-nav .navbar-toggler{
@@ -301,6 +310,7 @@ ul.social-buttons{
 
 }
 
+
 @media screen and (min-width:768px){
   .profile img{
     max-width: 230px;
@@ -308,6 +318,12 @@ ul.social-buttons{
   }
 }
  
+#main-nav .nav-item .navbar-profile-img{
+  width: 48px;
+  height:48px;
+  border-radius:50%;
+  border:2px solid white;
+}
 
-
+ 
  
